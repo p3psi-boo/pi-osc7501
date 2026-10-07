@@ -13,27 +13,6 @@ Article / 文章: https://mitchellh.com/writing/program-status-osc7501
 pi install git:github.com/p3psi-boo/pi-osc7501
 ```
 
-Pin a commit or tag / 固定版本：
-
-```bash
-pi install git:github.com/p3psi-boo/pi-osc7501@main
-```
-
-Project-local / 项目级：
-
-```bash
-pi install -l git:github.com/p3psi-boo/pi-osc7501
-```
-
-Also accepted / 也可用：
-
-```bash
-pi install https://github.com/p3psi-boo/pi-osc7501
-```
-
-Update / 更新：`pi update --extensions`  
-Remove / 卸载：`pi remove git:github.com/p3psi-boo/pi-osc7501`
-
 Kill-switch: `OSC7501=0` disables emission (default enabled).  
 禁用开关：`OSC7501=0` 关闭上报（默认开启）。
 
