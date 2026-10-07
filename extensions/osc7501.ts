@@ -1,6 +1,6 @@
 // @ts-nocheck
 // Pi coding-agent extension: emit OSC 7501 Program Status Protocol.
-// Install: cp osc7501.ts ~/.pi/agent/extensions/
+// Install: pi install git:github.com/p3psi-boo/pi-osc7501
 // Spec: https://www.superlogical.com/rex/docs/build/program-status
 
 import fs from "node:fs";

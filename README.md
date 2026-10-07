@@ -10,21 +10,29 @@ Article / 文章: https://mitchellh.com/writing/program-status-osc7501
 ## Install / 安装
 
 ```bash
-mkdir -p ~/.pi/agent/extensions
-cp osc7501.ts ~/.pi/agent/extensions/
-# or symlink / 或符号链接:
-# ln -sf /path/to/pi-osc7501/osc7501.ts ~/.pi/agent/extensions/osc7501.ts
+pi install git:github.com/p3psi-boo/pi-osc7501
 ```
 
-One-liner from this repo:
+Pin a commit or tag / 固定版本：
 
 ```bash
-mkdir -p ~/.pi/agent/extensions && cp "$(pwd)/osc7501.ts" ~/.pi/agent/extensions/
+pi install git:github.com/p3psi-boo/pi-osc7501@main
 ```
 
-Verify: start `pi` in Ghostty/Rex, run a prompt, watch for OSC 7501 in a supporting terminal.
+Project-local / 项目级：
 
-验证：在 Ghostty/Rex 中启动 `pi`，运行一次提示，在支持该协议的终端中观察 OSC 7501。
+```bash
+pi install -l git:github.com/p3psi-boo/pi-osc7501
+```
+
+Also accepted / 也可用：
+
+```bash
+pi install https://github.com/p3psi-boo/pi-osc7501
+```
+
+Update / 更新：`pi update --extensions`  
+Remove / 卸载：`pi remove git:github.com/p3psi-boo/pi-osc7501`
 
 Kill-switch: `OSC7501=0` disables emission (default enabled).  
 禁用开关：`OSC7501=0` 关闭上报（默认开启）。
@@ -73,3 +81,7 @@ ESC ] 7501 ; state=working:app=pi:msg=<base64> ESC \
 - Only active in TUI mode (`ctx.mode === "tui"`).
 - Feature detection (`OSC 7501 ; ? ST`) is skipped; reports are always emitted — well-behaved terminals ignore unknown OSC.
 - Write failures (no TTY) are swallowed; never throws.
+
+## License
+
+WTFPL

@@ -4,7 +4,23 @@
   "description": "Pi coding-agent extension that emits Mitchell Hashimoto's OSC 7501 Program Status Protocol over the PTY.",
   "license": "WTFPL",
   "type": "module",
-  "main": "osc7501.ts",
-  "keywords": ["pi", "coding-agent", "osc7501", "program-status", "terminal"],
-  "files": ["osc7501.ts", "README.md"]
+  "main": "extensions/osc7501.ts",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "coding-agent",
+    "osc7501",
+    "program-status",
+    "terminal"
+  ],
+  "files": [
+    "extensions/",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions/osc7501.ts"
+    ]
+  }
 }
